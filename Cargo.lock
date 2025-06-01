@@ -34,13 +34,15 @@ checksum = "ace50bade8e6234aa140d9a2f552bbee1db4d353f69b8217bc503490fc1a9f26"
 
 [[package]]
 name = "axp192-dd"
-version = "0.1.0"
-source = "git+https://github.com/okhsunrog/axp192-dd#59e2b84e746a120c7d1b83985b1111729c0d4157"
+version = "0.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e7a64db9561e1982653015257edafe3ede3e72d491a3387756648d8f451b2fc2"
 dependencies = [
  "bisync",
- "bisync_macros",
+ "bisync_suffix_macro",
  "defmt 1.0.1",
  "device-driver",
+ "embedded-hal 1.0.0",
  "embedded-hal-async",
  "thiserror",
 ]
@@ -57,7 +59,8 @@ dependencies = [
 [[package]]
 name = "bisync"
 version = "0.3.0"
-source = "git+https://github.com/okhsunrog/bisync.git?branch=feature%2Foptional-async-suffix#f1e678d99f711466d41b554824373df3251f1593"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5020822f6d6f23196ccaf55e228db36f9de1cf788052b37992e17cbc96ec41a7"
 dependencies = [
  "bisync_macros",
 ]
@@ -65,7 +68,14 @@ dependencies = [
 [[package]]
 name = "bisync_macros"
 version = "0.2.3"
-source = "git+https://github.com/okhsunrog/bisync.git?branch=feature%2Foptional-async-suffix#f1e678d99f711466d41b554824373df3251f1593"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d21f40d350a700f6aa107e45fb26448cf489d34794b2ba4522181dc9f1173af6"
+
+[[package]]
+name = "bisync_suffix_macro"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2510ca67e6d6ed443ec7e8dc89fe583c6e3315f27f743248d2d3d3e750a1130e"
 dependencies = [
  "proc-macro2",
  "quote",

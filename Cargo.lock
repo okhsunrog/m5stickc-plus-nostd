@@ -34,12 +34,11 @@ checksum = "ace50bade8e6234aa140d9a2f552bbee1db4d353f69b8217bc503490fc1a9f26"
 
 [[package]]
 name = "axp192-dd"
-version = "0.1.2"
+version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e7a64db9561e1982653015257edafe3ede3e72d491a3387756648d8f451b2fc2"
+checksum = "fd6d7178402e9f94f3a38d6e9bc15947eb863ea2b7b161e6b4db9500137e6ca0"
 dependencies = [
  "bisync",
- "bisync_suffix_macro",
  "defmt 1.0.1",
  "device-driver",
  "embedded-hal 1.0.0",
@@ -70,17 +69,6 @@ name = "bisync_macros"
 version = "0.2.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d21f40d350a700f6aa107e45fb26448cf489d34794b2ba4522181dc9f1173af6"
-
-[[package]]
-name = "bisync_suffix_macro"
-version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2510ca67e6d6ed443ec7e8dc89fe583c6e3315f27f743248d2d3d3e750a1130e"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn",
-]
 
 [[package]]
 name = "bitfield"
@@ -453,6 +441,7 @@ version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0c4c685bbef7fe13c3c6dd4da26841ed3980ef33e841cddfa15ce8a8fb3f1884"
 dependencies = [
+ "defmt 0.3.100",
  "embedded-hal 1.0.0",
 ]
 

@@ -1,7 +1,7 @@
 #![no_std]
 #![no_main]
 
-use axp192_dd::{Axp192, AxpError, ChargeCurrentValue, Gpio0FunctionSelect, LdoId};
+use axp192_dd::{Axp192Async, AxpError, ChargeCurrentValue, Gpio0FunctionSelect, LdoId};
 use defmt::info;
 use embassy_executor::Spawner;
 use embassy_time::{Duration, Timer};
@@ -51,7 +51,7 @@ async fn main(spawner: Spawner) {
 
 #[rustfmt::skip]
 async fn init_m5stickc_plus_pmic(i2c: I2c<'_, Async>) -> Result<(), AxpError<I2cError>> {
-    let mut axp = Axp192::new(i2c);
+    let mut axp = Axp192Async::new(i2c);
     axp.set_ldo_voltage_mv(LdoId::Ldo2, 3300).await?;
     axp.ll.adc_enable_1().write_async(|r| {
         r.set_battery_current_adc_enable(true);
